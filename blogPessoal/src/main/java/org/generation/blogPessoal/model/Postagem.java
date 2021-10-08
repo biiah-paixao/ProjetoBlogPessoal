@@ -35,8 +35,12 @@ public class Postagem {
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 	
 	@ManyToOne
-	@JsonIgnoreProperties("postagem")
+	@JsonIgnoreProperties("postagem") // evitar um loop infinito / vai rodar apenas uma vez a informação / ignorar qualquer informação igual a que já foi achado
 	private Tema tema;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem") // evitar um loop infinito / vai rodar apenas uma vez a informação / ignorar qualquer informação igual a que já foi achado
+	private Usuario usuario;
 
 	
 	public long getId() {
@@ -72,6 +76,15 @@ public class Postagem {
 	public void setTema(Tema tema) {
 		this.tema = tema;
 	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
 	
 	
 	

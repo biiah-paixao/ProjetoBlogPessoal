@@ -45,7 +45,7 @@ public class PostagemController {
 	
 	@GetMapping("/titulo/{titulo}") // especifica é uma variavel do titulo {nome do titulo}
 	public ResponseEntity<List<Postagem>> getByTitulo(@PathVariable String titulo) {
-		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
+		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo)); // como se fosse o like do ele/ ignore case é para ignorar o case sensitive pode ser maiuscula e minuscula 
 	}
 	
 	@PostMapping // é enviar dados e persistir (gravar) um dado no banco
