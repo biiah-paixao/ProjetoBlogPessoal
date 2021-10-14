@@ -1,20 +1,16 @@
 package org.generation.blogPessoal.model;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import io.swagger.annotations.ApiModelProperty;
 
 @Entity
 @Table(name = "tb_usuarios")
@@ -27,18 +23,15 @@ public class Usuario {
 	@NotNull (message = "O nome é Obrigatório!")
 	private String nome;
 	
-	@NotNull (message = "O atrituto Usuário é Obrigatório!")
+	@ApiModelProperty(example = "email@email.com.br")
+	@NotNull (message = "O atributo Usuário é  Obrigatório")
 	@Email (message = "O atrituto Usuário deve ser um email válido!")
 	private String usuario;
-	 
-	@NotBlank // não deve ser nulo e/ou não conter espaços em branco
-	@Size(min = 8, message = "A senha deve ter no minimo 8 caracteres") 
+	
+	@NotBlank 
+	@Size(min = 8, message = "A senha precisa ter no minímo 8 caracteres")
 	private String senha;
 	
-	@OneToMany (mappedBy = "usuario", cascade = CascadeType.REMOVE) 
-	@JsonIgnoreProperties("usuario")
-	private List<Postagem> postagem;
-
 	public Usuario(long id, String nome, String usuario, String senha) {
 		this.id = id;
 		this.nome = nome;
@@ -46,7 +39,7 @@ public class Usuario {
 		this.senha = senha;
 	}
 	
-	public Usuario() {	} //para gerar um objeto nulo
+	public Usuario() { }
 
 	public long getId() {
 		return id;
@@ -79,16 +72,6 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
-	public List<Postagem> getPostagem() {
-		return postagem;
-	}
-
-	public void setPostagem(List<Postagem> postagem) {
-		this.postagem = postagem;
-	}
 	
-	
-
 	
 }
