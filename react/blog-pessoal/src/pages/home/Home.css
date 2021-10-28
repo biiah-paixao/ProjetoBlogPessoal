@@ -1,11 +1,20 @@
 .titulo {
-    color: violet;
-    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: Thinking of Betty, Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    text-shadow: 10px 4px 4px rgb(143, 99, 194);
 }
 
 .img {
-    width: 500px;
+    width: 100%;
     display: block;
     margin: 0 auto;
 
+}
+
+.fundo {
+    padding: 30px;
+    background-image: url(https://i.imgur.com/qOm70Lw.png);
+    background-size: 100%;
 }

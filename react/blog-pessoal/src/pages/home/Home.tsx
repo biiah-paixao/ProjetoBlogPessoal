@@ -1,14 +1,16 @@
 import React from 'react';
 import {Typography, Box, Grid, Button} from '@material-ui/core';
 import './Home.css';
+import { red } from '@material-ui/core/colors';
 
 function Home() {
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#3F51B5" }}>
-                <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
+            <Grid container direction="row" justifyContent="center" alignItems="center" className="fundo">
+                <Grid alignItems="center" item xs={5} >
+                    <Box paddingX={15}>
+                        <Typography variant="h3" gutterBottom component="h3" align="center" className="titulo">Programação</Typography>
+
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>expresse aqui os seus pensamentos e opiniões!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
@@ -17,8 +19,8 @@ function Home() {
                         <Button variant="outlined" style={{ borderColor: "white", backgroundColor: "#3F51B5", color: "white" }}>Ver Postagens</Button>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+                <Grid item xs={7}>
+                    <img src="https://i.imgur.com/8P1ChWX.png" alt="" className="img"/>
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
                 </Grid>
@@ -28,25 +30,3 @@ function Home() {
 }
 
 export default Home;
-
-
-/*function Home() {
-    return (
-        <>
-            <Grid container spacing={2}>
-                <Grid item xs={12} sm={8}>
-                    <Paper style={{ height: "100vh", background: "purple"}}/>
-                </Grid>
-                <Grid item container direction="column" xs={12} sm={4} spacing={2}>
-                    <Grid item>
-                        <Paper style={{ height: "49vh", background: "orange"}}/>
-                    </Grid>
-                    <Grid item>
-                        <Paper style={{ height: "49vh", background: "violet"}}/>
-                    </Grid>
-
-                </Grid>
-            </Grid>
-        </>
-    );
-}*/
