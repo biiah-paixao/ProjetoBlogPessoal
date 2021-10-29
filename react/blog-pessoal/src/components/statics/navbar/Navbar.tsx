@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 function Navbar() {
@@ -34,11 +35,13 @@ function Navbar() {
                                 contato
                             </Typography>
                         </Box>
+                        <Link to='/login' className='text-decorator-none'>
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
                                 sign-in / login
                             </Typography>
                         </Box>
+                        </Link>
                     </Box>
 
                 </Toolbar>

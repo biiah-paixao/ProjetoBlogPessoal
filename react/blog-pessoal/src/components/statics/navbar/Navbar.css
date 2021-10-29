@@ -6,3 +6,7 @@
 .color {
     background-color: "red";
 }
+
+.text-decorator-none{
+    text-decoration: none;
+}
