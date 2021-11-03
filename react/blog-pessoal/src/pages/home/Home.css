@@ -14,7 +14,13 @@
 }
 
 .fundo {
-    padding: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
     background-image: url(https://i.imgur.com/qOm70Lw.png);
     background-size: 100%;
+}
+
+.card {
+    padding: 10px;
 }
