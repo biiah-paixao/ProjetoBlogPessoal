@@ -1,11 +1,11 @@
 import React from 'react';
-import { Typography, Box, Grid } from '@material-ui/core';
+import { Box, Grid, Typography } from "@material-ui/core";
 import './Home.css';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActions } from '@mui/material';
 
 function Home() {
     return (
@@ -30,130 +30,63 @@ function Home() {
                 </Grid>
             </Grid>
 
-            <Grid container direction="row" display="flex"  justifyContent="center" alignItems="center">
-                <Grid item xs={2} className="card">
-                    <Card>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                image="https://avatars.githubusercontent.com/u/47614833?v=4  "
-                                alt=""
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Julia Farias
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                                    species, ranging across all continents except Antarctica
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Share
-                            </Button>
-                        </CardActions>
+
+
+            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ padding: "20px" }} >
+                <Grid item xs={3} style={{ padding: "10px" }}>
+                    <Card sx={{ maxWidth: 345 }}>
+                        <CardMedia
+                            component="img"
+                            height="140"
+                            image="https://i.imgur.com/mWqZ4fa.png"
+                            alt=""
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h6" component="div" align="center">
+                                HTML
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" align="center">
+                                O HTML é o esqueleto, composto dos ossos que o sustenta
+                            </Typography>
+                        </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={2} className="card">
+
+                <Grid item xs={3} style={{ padding: "10px" }}>
                     <Card sx={{ maxWidth: 345 }}>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                image="https://avatars.githubusercontent.com/u/88987516?v=4"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Vitor Santana
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                                    species, ranging across all continents except Antarctica
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Share
-                            </Button>
-                        </CardActions>
+                        <CardMedia
+                            component="img"
+                            height="140"
+                            image="https://i.imgur.com/oG13oIi.jpg"
+                            alt=""
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h6" component="div" align="center">
+                                CSS
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" align="center">
+                                O CSS é a pele, cabelo e roupas, criando o visual que realmente enxergamos quando olhamos para alguma pessoa
+                            </Typography>
+                        </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={2} className="card">
+
+                <Grid item xs={3} style={{ padding: "10px" }}>
                     <Card sx={{ maxWidth: 345 }}>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                image="https://avatars.githubusercontent.com/u/88353298?v=4"
-                                alt=""
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Beatriz Paixão
-                                </Typography>
-                                <Typography variant="body2" color="textSecondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                                    species, ranging across all continents except Antarctica
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Share
-                            </Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-                <Grid item xs={2} className="card">
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                image="https://avatars.githubusercontent.com/u/89790032?v=4"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Gustavo S.
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                                    species, ranging across all continents except Antarctica
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Share
-                            </Button>
-                        </CardActions>
-                    </Card>
-                </Grid>
-                <Grid item xs={2} className="card">
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                image="https://avatars.githubusercontent.com/u/86704425?v=4"
-                                alt="green iguana"
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Jessica Lemos
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                                    species, ranging across all continents except Antarctica
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                        <CardActions>
-                            <Button size="small" color="primary">
-                                Share
-                            </Button>
-                        </CardActions>
+                        <CardMedia
+                            component="img"
+                            height="140"
+                            image="https://i.imgur.com/uCBBesS.jpg"
+                            alt=""
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h6" component="div" align="center">
+                                JS
+                            </Typography>
+                            <Typography variant="body2" color="textSecondary" align="center">
+                                Javascript é o músculo, que dá movimento ao corpo
+                            </Typography>
+                        </CardContent>
                     </Card>
                 </Grid>
             </Grid>
