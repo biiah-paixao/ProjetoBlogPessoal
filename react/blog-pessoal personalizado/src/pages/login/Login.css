@@ -8,6 +8,11 @@
 }
 
 .imagem{
+    /* style={{
+        backgroundImage: `url(https://imgur.com/UbehjVt.gif)`,
+        backgroundRepeat: 'no-repeat', width: '100vh', minHeight: '100vh', backgroundSize: 'cover', backgroundPosition: 'center'
+    }} */
+
     background-image: url(https://imgur.com/UbehjVt.gif);
     background-repeat: no-repeat;
     width: 100vh;

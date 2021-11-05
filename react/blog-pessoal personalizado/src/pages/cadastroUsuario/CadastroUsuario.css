@@ -1,17 +1,16 @@
-.text-decoration-none{
-    text-decoration: none;
-}
-
-.textos{
-    /* style={{fontWeight: 'bold'}} */
-    font-weight: bold !important;
-}
-
-.imagem{
+.imagem2{
     background-image: url(https://imgur.com/UbehjVt.gif);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
+}
+
+.textos2{
+    font-weight: bold !important;
+}
+
+.btnCancelar{
+    margin-right: 20px !important;
 }

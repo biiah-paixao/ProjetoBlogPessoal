@@ -53,13 +53,12 @@ function Navbar() {
                             </Typography>
                         </Box>
                         </Link>
-                        <Link to="/login">
+                      
                             <Box mx={1} className='cursor' onClick={goLogout}>
                                 <Typography variant="h6" color="inherit">
                                     logout
                                 </Typography>
                             </Box>
-                        </Link>
                         
                     </Box>
 
