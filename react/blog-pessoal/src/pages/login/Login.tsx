@@ -1,5 +1,5 @@
-import React, { ChangeEvent, useState, useEffect } from 'react';
 import { Grid, Box, Typography, TextField, Button } from '@material-ui/core';
+import React ,{ ChangeEvent, useState, useEffect} from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { login } from '../../services/Service';
@@ -7,9 +7,9 @@ import UserLogin from '../../models/UserLogin';
 import './Login.css';
 
 function Login() {
-    let history = useHistory();
+    let history= useHistory();
     const [token, setToken] = useLocalStorage('token');
-    const [userLogin, setUserLogin] = useState<UserLogin>(
+    const[userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
             usuario: '',
@@ -26,19 +26,19 @@ function Login() {
         })
     }
 
-    useEffect(() => {
-        if (token != '') {
+    useEffect(()=>{
+        if(token != ''){
             history.push('/home')
         }
     }, [token])
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
-        try {
+        try{
             await login('/usuarios/logar', userLogin, setToken)
             alert('Usuário logado com sucesso!');
 
-        } catch (error) {
+        }catch(error){
             alert('Dados do usuário inconsistentes. Erro ao logar!')
         }
     }
@@ -50,35 +50,35 @@ function Login() {
                     <form onSubmit={onSubmit}>
                         <Typography variant="h3" color="primary" gutterBottom component='h3' align='center' className='textos'>Entrar</Typography>
                         <TextField
-                            value={userLogin.usuario}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            id="usuario"
-                            label="usuário"
-                            variant='outlined'
-                            name='usuario'
-                            margin='normal'
-                            fullWidth
+                          value={userLogin.usuario}
+                          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                          id="usuario"
+                          label="usuário"
+                          variant='outlined'
+                          name='usuario'
+                          margin='normal'
+                          fullWidth
 
                         />
 
                         <TextField
-                            value={userLogin.senha}
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            id="senha"
-                            label="senha"
-                            variant='outlined'
-                            name='senha'
-                            margin='normal'
-                            type='password'
-                            fullWidth
+                          value={userLogin.senha}
+                          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                          id="senha"
+                          label="senha"
+                          variant='outlined'
+                          name='senha'
+                          margin='normal'
+                          type='password'
+                          fullWidth
                         />
 
                         <Box marginTop={2} textAlign='center'>
-
-                            <Button type='submit' variant='contained' color='primary'>
-                                Logar
-                            </Button>
-
+                            
+                                <Button type='submit' variant='contained' color='primary'>
+                                    Logar
+                                </Button>
+                            
                         </Box>
                     </form>
                     <Box display='flex' justifyContent='center' marginTop={2}>
