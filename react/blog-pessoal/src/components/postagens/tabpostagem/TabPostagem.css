@@ -1,0 +1,11 @@
+.titulo{
+    font-weight: bold;
+ }
+
+.caixa{
+    background-color: #3F51B5;
+}
+
+.textoTab{
+    color: white !important;
+}
