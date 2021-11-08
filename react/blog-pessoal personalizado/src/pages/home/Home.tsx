@@ -1,9 +1,22 @@
 import { Box, Button, Grid, Typography } from "@material-ui/core";
-import React from "react";
-import TabPostagem from "../../components/postagens/tabpostagem/TabPostagem";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router";
+import useLocalStorage from "react-use-localstorage";
+import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
 import './Home.css';
 
 function Home() {
+
+    const [token, setToken] = useLocalStorage('token');
+    let history = useHistory();
+
+    useEffect(() => {
+        if (token == '') {
+          alert("deslogado")
+          history.push("/login")
+        }
+      
+      }, [token])
     return (
         <>
            <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
