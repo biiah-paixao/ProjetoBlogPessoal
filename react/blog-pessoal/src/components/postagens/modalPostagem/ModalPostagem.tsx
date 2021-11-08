@@ -1,5 +1,6 @@
 import React from 'react'
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import {  Theme, createStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/styles';
 import Modal from '@material-ui/core/Modal';
 import {Button,Box } from "@material-ui/core"
 import CloseIcon from '@material-ui/icons/Close';
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 function ModalPostagem () {
-  // const classes = useStyles();
+  const classes = useStyles();
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
 
