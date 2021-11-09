@@ -1,17 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navbar from './components/statics/navbar/Navbar';
+import CadastroPost from './components/postagens/cadastroPost/CadastroPost';
+import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
+import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
 import Footer from './components/statics/footer/Footer';
+import Navbar from './components/statics/navbar/Navbar';
+import CadastroTema from './components/temas/cadastroTema/CadastroTema';
+import DeletarTema from './components/temas/deletarTema/DeletarTema';
+import ListaTema from './components/temas/listaTema/ListaTema';
 import CadastroUsuario from './pages/cadastroUsuario/CadastroUsuario';
 import Home from './pages/home/Home';
 import Login from './pages/login/Login';
-import './App.css';
-import ListaTema from './components/temas/listaTema/ListaTema';
-import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
-import CadastroPost from './components/postagens/cadastroPost/CadastroPost';
-import CadastroTema from './components/temas/cadastroTema/CadastroTema';
-import DeletarPostagem from './components/postagens/deletarPostagem/DeletarPostagem';
-import DeletarTema from './components/temas/deletarTema/DeletarTema';
 
 
 function App() {

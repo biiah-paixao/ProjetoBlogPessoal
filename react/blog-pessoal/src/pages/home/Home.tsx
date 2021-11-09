@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import useLocalStorage from "react-use-localstorage";
 import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
+
 import './Home.css';
 
 function Home() {
