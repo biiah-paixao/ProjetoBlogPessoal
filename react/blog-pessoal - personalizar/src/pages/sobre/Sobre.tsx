@@ -24,7 +24,7 @@ function Sobre() {
                                 HTML
                             </Typography>
                             <Typography variant="body2" color="textSecondary" align="center">
-                                O HTML é o esqueleto, composto dos ossos que o sustenta
+                                O HTML é o esqueleto, composto dos ossos que o sustenta.
                             </Typography>
                         </CardContent>
                     </Card>
@@ -43,7 +43,7 @@ function Sobre() {
                                 CSS
                             </Typography>
                             <Typography variant="body2" color="textSecondary" align="center">
-                                O CSS é a pele, cabelo e roupas, criando o visual que realmente enxergamos quando olhamos para alguma pessoa
+                                O CSS é a pele, cabelo e roupas, criando o visual que realmente enxergamos quando olhamos para alguma pessoa.
                             </Typography>
                         </CardContent>
                     </Card>
@@ -62,7 +62,7 @@ function Sobre() {
                                 JS
                             </Typography>
                             <Typography variant="body2" color="textSecondary" align="center">
-                                Javascript é o músculo, que dá movimento ao corpo
+                                Javascript é o músculo, que dá movimento ao corpo.
                             </Typography>
                         </CardContent>
                     </Card>
