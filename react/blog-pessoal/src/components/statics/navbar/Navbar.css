@@ -1,8 +1,31 @@
 .cursor{
     cursor: pointer;
     color: white;
+<<<<<<< HEAD
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
+
+
+
+/*.img {
+    width: 30px;
+    margin: 0 auto;
+}
+
+.color {
+    background-color: "red";
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}*/
+=======
 }
 
 .text-decorator-none{
     text-decoration: none !important;
 }
+>>>>>>> fc7e4375de165f2cd70ac437a990071b693ae016
