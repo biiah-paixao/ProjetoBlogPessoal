@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom'
 import './Navbar.css'
@@ -9,57 +9,6 @@ import { addToken } from '../../../store/tokens/actions';
 import { toast } from  'react-toastify';
 
 function Navbar() {
-<<<<<<< HEAD
-    return (
-        <>
-            <AppBar position="static" style={{ backgroundColor: "white" }}>
-                <Toolbar variant="dense">
-                    <Box>
-                        <img src="https://i.imgur.com/ubX6fHt.png" alt="" />
-                    </Box>
-                    <Box className='cursor'>
-                        <Typography variant="h5" color="black" style={{ padding: "10px" }}>
-                            BlogPessoal
-                        </Typography>
-                    </Box>
-                    <Box display="flex" justifyContent="center" ml="auto" paddingRight={5}>
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="black" paddingRight={5}>
-                                home
-                            </Typography>
-                        </Box>
-                        <Link to='/sobre' className='text-decorator-none'>
-                            <Box mx={1} className='cursor'>
-                                <Typography variant="h6" color="black" paddingRight={5}>
-                                    sobre
-                                </Typography>
-                            </Box>
-                        </Link>
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="black" paddingRight={5}>
-                                contato
-                            </Typography>
-                        </Box>
-
-                        <Link to='/login' className='text-decorator-none'>
-                            <Box mx={1} className='cursor'>
-                                <Typography variant="h6" color="black">
-                                    sign-in / login
-                                </Typography>
-                            </Box>
-                        </Link>
-                    </Box>
-
-
-                </Toolbar>
-            </AppBar>
-
-
-            {/*<AppBar position="static" style={{ backgroundColor: "#270C54" }}>
-                <Toolbar variant="dense">
-                    <Box>
-                        <img src="https://i.imgur.com/a5L3UYw.png" alt="" />
-=======
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
       );
@@ -98,7 +47,6 @@ function Navbar() {
                         <Typography variant="h6" color="inherit">
                             home
                         </Typography>
->>>>>>> fc7e4375de165f2cd70ac437a990071b693ae016
                     </Box>
                 </Link>
                 <Link to="/posts" className="text-decorator-none">
@@ -107,31 +55,6 @@ function Navbar() {
                             postagens
                         </Typography>
                     </Box>
-<<<<<<< HEAD
-
-                    <Box display="flex" ml="auto" paddingRight="79px">
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                home
-                            </Typography>
-                        </Box>
-
-                        <Link to='/sobre' className='text-decorator-none'>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                sobre
-                            </Typography>
-                        </Box>
-                        </Link>
-
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                contato
-                            </Typography>
-                        </Box>
-
-            */}
-=======
                 </Link>
                 <Link to="/temas" className="text-decorator-none">
                     <Box mx={1} className='cursor'>
@@ -161,7 +84,6 @@ function Navbar() {
     return (
         <>
             {navbarComponent}
->>>>>>> fc7e4375de165f2cd70ac437a990071b693ae016
         </>
     )
 }
