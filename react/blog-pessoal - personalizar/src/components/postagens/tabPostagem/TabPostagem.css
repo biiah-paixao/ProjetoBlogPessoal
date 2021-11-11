@@ -2,10 +2,12 @@
     font-weight: bold;
  }
 
-.caixa{
-    background-color: #3F51B5;
+.back-color{
+    background-color: #a161af;
 }
 
+
+
 .textoTab{
-    color: white !important;
+    color: black !important;
 }

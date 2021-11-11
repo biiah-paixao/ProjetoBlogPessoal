@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useHistory } from "react-router";
 import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
 import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
+import Sobre from "../sobre/Sobre";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
@@ -37,13 +38,14 @@ function Home() {
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-                <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja bem-vindo(a)!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>expresse aqui os seus pensamentos e opiniões!</Typography>
+                <Grid alignItems="center" item xs={6} >
+                    <Box paddingLeft={10} paddingRight={20} >
+                        <Typography variant="h2" gutterBottom color="textPrimary" component="h3" className='titulo'>Olá, Seja</Typography>
+                        <Typography variant="h2" gutterBottom color="textPrimary" component="h3" className='titulo'>bem-vindo(a)!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5"  className='titulo'>Compartilhe e adquira dicas e ideias sobre programação</Typography>
                     </Box>
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
+                    <Box display="flex" justifyContent="flex-start" paddingLeft={10}>
+                        <Box marginRight={1} paddingBottom={20}>
                             <ModalPostagem />
                         </Box>
                         <Link to="/posts" className="text-decorator-none">
@@ -51,8 +53,10 @@ function Home() {
                         </Link>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+                <Grid item xs={6} style={{ height:"100vh"}}>
+                </Grid>
+                <Grid xs={12} className='postagens'>
+                    <Sobre />
                 </Grid>
                 <Grid xs={12} className='postagens'>
                     <TabPostagem />

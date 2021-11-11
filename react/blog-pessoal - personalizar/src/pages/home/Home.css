@@ -1,9 +1,11 @@
 .caixa{
-    background-color: #3F51B5;
+    background-image: url(https://i.imgur.com/531xG9U.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .titulo{
-    color: white !important;
+    color: #3F51B5 !important;
     font-weight: bold !important;
 }
 
