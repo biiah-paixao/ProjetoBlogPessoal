@@ -1,6 +1,7 @@
 .cursor{
     cursor: pointer;
     color: white;
+<<<<<<< HEAD
 }
 
 .text-decorator-none{
@@ -21,3 +22,10 @@
 .text-decorator-none{
     text-decoration: none;
 }*/
+=======
+}
+
+.text-decorator-none{
+    text-decoration: none !important;
+}
+>>>>>>> fc7e4375de165f2cd70ac437a990071b693ae016

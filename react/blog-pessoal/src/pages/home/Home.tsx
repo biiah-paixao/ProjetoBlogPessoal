@@ -1,93 +1,68 @@
-import React from 'react';
-import { Box, Grid, Typography } from "@material-ui/core";
-import './Home.css';
+import { Box, Button, Grid, Typography } from "@material-ui/core";
+import React, { useEffect } from "react";
+import { useHistory } from "react-router";
+import ModalPostagem from "../../components/postagens/modalPostagem/ModalPostagem";
+import TabPostagem from "../../components/postagens/tabPostagem/TabPostagem";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { Button, CardActions } from '@mui/material';
+import './Home.css';
+import { Link } from "react-router-dom";
 
 function Home() {
+
+    let history = useHistory();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+        (state) => state.tokens
+    );
+
+    useEffect(() => {
+        if (token == '') {
+            toast.error('Você precisa estar logado', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+            history.push("/login")
+        }
+
+    }, [token])
+
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" className="fundo">
-                <Grid alignItems="center" item xs={5} >
-                    <Box paddingX={15}>
-                        <Typography variant="h3" gutterBottom component="h3" align="center" className="titulo">Programação</Typography>
-
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>expresse aqui os seus pensamentos e opiniões!</Typography>
+            <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
+                <Grid alignItems="center" item xs={6}>
+                    <Box paddingX={20} >
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja bem-vindo(a)!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>expresse aqui os seus pensamentos e opiniões!</Typography>
                     </Box>
                     <Box display="flex" justifyContent="center">
                         <Box marginRight={1}>
+                            <ModalPostagem />
                         </Box>
-                        <Button variant="outlined" style={{ borderColor: "white", backgroundColor: "#3F51B5", color: "white" }}>Ver Postagens</Button>
+                        <Link to="/posts" className="text-decorator-none">
+                            <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                        </Link>
                     </Box>
                 </Grid>
+<<<<<<< HEAD
                 <Grid item xs={7}>
                     <img src="https://i.imgur.com/AEcFlT4.png" alt="" className="img"/>
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
+=======
+                <Grid item xs={6} >
+                    <img src="https://i.imgur.com/H88yIo2.png" alt="" width="500px" height="500px" />
+>>>>>>> fc7e4375de165f2cd70ac437a990071b693ae016
                 </Grid>
-            </Grid>
-
-
-
-            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ padding: "20px" }} >
-                <Grid item xs={3} style={{ padding: "10px" }}>
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            image="https://i.imgur.com/mWqZ4fa.png"
-                            alt=""
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" align="center">
-                                HTML
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" align="center">
-                                O HTML é o esqueleto, composto dos ossos que o sustenta
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
-
-                <Grid item xs={3} style={{ padding: "10px" }}>
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            image="https://i.imgur.com/oG13oIi.jpg"
-                            alt=""
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" align="center">
-                                CSS
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" align="center">
-                                O CSS é a pele, cabelo e roupas, criando o visual que realmente enxergamos quando olhamos para alguma pessoa
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
-
-                <Grid item xs={3} style={{ padding: "10px" }}>
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardMedia
-                            component="img"
-                            height="140"
-                            image="https://i.imgur.com/uCBBesS.jpg"
-                            alt=""
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" align="center">
-                                JS
-                            </Typography>
-                            <Typography variant="body2" color="textSecondary" align="center">
-                                Javascript é o músculo, que dá movimento ao corpo
-                            </Typography>
-                        </CardContent>
-                    </Card>
+                <Grid xs={12} className='postagens'>
+                    <TabPostagem />
                 </Grid>
             </Grid>
         </>

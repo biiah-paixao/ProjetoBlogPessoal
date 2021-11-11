@@ -1,25 +1,22 @@
-.titulo {
-    color: white;
-    font-weight: bold;
-    font-family: Thinking of Betty, Verdana, Geneva, Tahoma, sans-serif;
-    text-transform: uppercase;
-    text-shadow: 10px 4px 4px rgb(143, 99, 194);
+.caixa{
+    background-color: #3F51B5;
 }
 
-.img {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-
+.titulo{
+    color: white !important;
+    font-weight: bold !important;
 }
 
-.fundo {
-    padding: 30px;
-    background-image: url(https://i.imgur.com/qOm70Lw.png);
-    background-size: 100%;
-    
+.botao{
+    border-color: white !important;
+    background-color: #3F51B5 !important;
+    color: white !important;
 }
 
-.card {
-    padding: 10px;
+.postagens{
+    background-color: white;
+}
+
+.text-decorator-none {
+    text-decoration: none;
 }
