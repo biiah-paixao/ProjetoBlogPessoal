@@ -1,4 +1,15 @@
-.img {
+.cursor{
+    cursor: pointer;
+    color: white;
+}
+
+.text-decorator-none{
+    text-decoration: none;
+}
+
+
+
+/*.img {
     width: 30px;
     margin: 0 auto;
 }
@@ -9,4 +20,4 @@
 
 .text-decorator-none{
     text-decoration: none;
-}
+}*/

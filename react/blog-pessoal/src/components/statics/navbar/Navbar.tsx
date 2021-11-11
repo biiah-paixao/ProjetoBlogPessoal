@@ -1,54 +1,54 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 function Navbar() {
     return (
         <>
-<AppBar position="static">
+            <AppBar position="static" style={{ backgroundColor: "white" }}>
                 <Toolbar variant="dense">
+                    <Box>
+                        <img src="https://i.imgur.com/ubX6fHt.png" alt="" />
+                    </Box>
                     <Box className='cursor'>
-                        <Typography variant="h5" color="inherit">
+                        <Typography variant="h5" color="black" style={{ padding: "10px" }}>
                             BlogPessoal
                         </Typography>
                     </Box>
-
-                    <Box display="flex" justifyContent="start">
+                    <Box display="flex" justifyContent="center" ml="auto" paddingRight={5}>
                         <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
+                            <Typography variant="h6" color="black" paddingRight={5}>
                                 home
                             </Typography>
                         </Box>
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                postagens
-                            </Typography>
-                        </Box>
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                temas
-                            </Typography>
-                        </Box>
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                cadastrar tema
-                            </Typography>
-                        </Box>
-                        <Link to='/login' className='text-decorator-none'>
+                        <Link to='/sobre' className='text-decorator-none'>
                             <Box mx={1} className='cursor'>
-                                <Typography variant="h6" color="inherit">
-                                    logout
+                                <Typography variant="h6" color="black" paddingRight={5}>
+                                    sobre
                                 </Typography>
                             </Box>
                         </Link>
-                        
+                        <Box mx={1} className='cursor'>
+                            <Typography variant="h6" color="black" paddingRight={5}>
+                                contato
+                            </Typography>
+                        </Box>
+
+                        <Link to='/login' className='text-decorator-none'>
+                            <Box mx={1} className='cursor'>
+                                <Typography variant="h6" color="black">
+                                    sign-in / login
+                                </Typography>
+                            </Box>
+                        </Link>
                     </Box>
+
 
                 </Toolbar>
             </AppBar>
 
-            
+
             {/*<AppBar position="static" style={{ backgroundColor: "#270C54" }}>
                 <Toolbar variant="dense">
                     <Box>
@@ -80,17 +80,7 @@ function Navbar() {
                                 contato
                             </Typography>
                         </Box>
-                        <Link to='/login' className='text-decorator-none'>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                                sign-in / login
-                            </Typography>
-                        </Box>
-                        </Link>
-                    </Box>
 
-                </Toolbar>
-            </AppBar>
             */}
         </>
     )

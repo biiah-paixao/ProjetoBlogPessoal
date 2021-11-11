@@ -24,7 +24,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={7}>
-                    <img src="https://i.imgur.com/8P1ChWX.png" alt="" className="img" />
+                    <img src="https://i.imgur.com/AEcFlT4.png" alt="" className="img"/>
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
                 </Grid>
