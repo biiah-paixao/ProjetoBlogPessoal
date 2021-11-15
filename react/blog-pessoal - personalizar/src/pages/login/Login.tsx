@@ -118,7 +118,7 @@ function Login() {
                 </Box>
             </Grid>
 
-            <Grid xs={12} sm={6} className='imagem'>
+            <Grid xs={12} sm={6} className='imagem' >
 
             </Grid>
         </Grid>

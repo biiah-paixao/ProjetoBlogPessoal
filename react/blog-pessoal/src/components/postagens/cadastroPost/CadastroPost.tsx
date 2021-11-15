@@ -32,7 +32,7 @@ function CadastroPost() {
             });
             history.push("/login")
 
-        }
+        }git 
     }, [token])
 
     const [tema, setTema] = useState<Tema>(
